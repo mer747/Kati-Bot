@@ -3,6 +3,7 @@
     "@discordjs/rest": "^1.0.1",
     "ascii-table": "^0.0.9",
     "axios": "^0.27.2",
+    "discord-buttons": "^4.0.0-deprecated",
     "discord.js": "^14.1.1",
     "dotenv": "^16.0.1",
     "node-fetch": "^2.6.7"
