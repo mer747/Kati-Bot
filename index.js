@@ -5,6 +5,7 @@ const{Guilds,GuildMembers,GuildMessages} = GatewayIntentBits;
 const{User,Message,GuildMember,ThreadMember} = Partials;
 const fs = require('node:fs');
 const path = require('node:path');
+const { deploy } = require('./deploy-commands')
 
 
 const client = new Client({
@@ -48,6 +49,7 @@ client.once("ready", () => {
   console.log(`Logged in as ${client.user.username}\nClient id = ${client.user.id}`);
   client.user.setStatus('ONLINE');
   client.user.setActivity("/help | New to Discord 💕", "playing"); //new to Discord
+  deploy()
 })
 
 

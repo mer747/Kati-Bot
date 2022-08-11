@@ -9,7 +9,8 @@ const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith('
 
 const rest = new REST({ version: '10' }).setToken(token);
 
-for (const file of commandFiles) {
+function deploy() {
+	for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	commands.push(command.data.toJSON());
 }
@@ -18,4 +19,6 @@ rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);
 
+}
 
+module.exports = {deploy}
