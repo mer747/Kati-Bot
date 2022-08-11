@@ -6,25 +6,22 @@ module.exports = {
 		.setName('dog')
 		.setDescription('Woof Woof 🐕'),
 	async execute(interaction) {
-        async function dog() {
-            const res = await fetch("http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true");
-            const json = await res.json();
-            const image = json.toString()
+        const res = await fetch("http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true");
+        const json = await res.json();
+        const image = json.toString()
 
+        const embed = new EmbedBuilder()
+                    .setImage(image)
 
-            const embed = new EmbedBuilder()
-                        .setImage(image)
-
-            await interaction.reply({
-                    embeds:[embed],
-                });
+        await interaction.reply({
+                embeds:[embed],
+            });
 
             
 
 
         }
 
-        dog()
                 
 	},
 };
