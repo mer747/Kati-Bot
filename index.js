@@ -47,7 +47,7 @@ client.on('interactionCreate', async interaction => {
 
 
 client.once("ready", () => {
-  console.log(`Logged in as ${client.user.username}\nClient id = ${client.user.id}`);
+  console.log(`Logged in as ${client.user.username}`);
   client.user.setStatus('ONLINE');
   client.user.setActivity("/help | New to Discord 💕", "playing"); //new to Discord
   deploy()
