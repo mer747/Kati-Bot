@@ -2,10 +2,14 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
-const { clientId, guildId, token } = require('./config.json');
+require("dotenv").config()
 
 const commands = [].map(command => command.toJSON());
 const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith('.js'));
+
+const token = process.env.token
+const guildId = process.env.guildId
+const clientId = process.env.clientId
 
 const rest = new REST({ version: '10' }).setToken(token);
 

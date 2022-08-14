@@ -1,12 +1,13 @@
 const { Client, GatewayIntentBits, Guild, Partials, Collection} = require('discord.js');
-const { token } = require("./config.json");
+require('dotenv').config()
 
-const{Guilds,GuildMembers,GuildMessages} = GatewayIntentBits;
-const{User,Message,GuildMember,ThreadMember} = Partials;
+const {Guilds,GuildMembers,GuildMessages} = GatewayIntentBits;
+const {User,Message,GuildMember,ThreadMember} = Partials;
 const fs = require('node:fs');
 const path = require('node:path');
 const { deploy } = require('./deploy-commands')
 
+const token = process.env.token
 
 const client = new Client({
    intents: [Guilds, GuildMembers, GuildMessages, GatewayIntentBits.Guilds],
