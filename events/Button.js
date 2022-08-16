@@ -34,7 +34,7 @@ client.on('interactionCreate', interaction => {
 		cat()
 	}
 
-	if (string.customId == "dog") {
+	else if (string.customId == "dog") {
 		async function dog() {
 			const res = await fetch("http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true");
         	const json = await res.json();
@@ -63,7 +63,7 @@ client.on('interactionCreate', interaction => {
 		dog()
 	}
 
-	if (string.customId == "fox") {
+	else if (string.customId == "fox") {
 		async function fox() {
 			const res = await fetch("https://randomfox.ca/floof/?ref=apilist.fun");
 			const json = await res.json();
@@ -72,7 +72,7 @@ client.on('interactionCreate', interaction => {
 			let row = new ActionRowBuilder()
 			.addComponents(
 					new ButtonBuilder()
-							.setCustomId("cat")
+							.setCustomId("fox")
 							.setLabel("Another one!")
 							.setStyle(ButtonStyle.Success),
 			);
