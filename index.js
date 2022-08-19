@@ -19,6 +19,9 @@ module.exports = { client };
 client.events = new Collection();
 client.commands = new Collection();
 
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
@@ -28,10 +31,6 @@ for (const file of eventFiles) {
 
     client.events.set(event)
 } // Getting events from events folder
-
-const commandsPath = path.join(__dirname, 'commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
-
 
 for (const file of commandFiles) {
 	const filePath = path.join(commandsPath, file);

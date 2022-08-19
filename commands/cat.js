@@ -18,6 +18,7 @@ module.exports = {
                 );
                 const embed = new EmbedBuilder()
                     .setImage(image)
+                    .setColor("Yellow")
 
                 await interaction.reply({
                     embeds:[embed],

@@ -21,6 +21,7 @@ client.on('interactionCreate', interaction => {
 
 			const embed = new EmbedBuilder()
 			    .setImage(image)
+				.setColor("Yellow")
 
 			await interaction.reply({
 			    embeds:[embed],
@@ -50,6 +51,7 @@ client.on('interactionCreate', interaction => {
 
 			const embed = new EmbedBuilder()
 				.setImage(image)
+				.setColor("Yellow")
 
 			await interaction.reply({
 				embeds:[embed],
@@ -79,6 +81,7 @@ client.on('interactionCreate', interaction => {
 
 			const embed = new EmbedBuilder()
 				.setImage(image)
+				.setColor("Yellow")
 
 			await interaction.reply({
 				embeds:[embed],
