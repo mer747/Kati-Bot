@@ -15,7 +15,7 @@ module.exports = {
 				new ButtonBuilder()
 					.setLabel("Vote Us")
 					.setEmoji(topggemoji)
-					.setURL("https://top.gg/en")
+					.setURL("https://top.gg/en/bot/1006131299402121250")
 					.setStyle(ButtonStyle.Link),
 
 				new ButtonBuilder()
